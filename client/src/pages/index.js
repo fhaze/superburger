@@ -14,9 +14,6 @@ export default function() {
           <span aria-label="coffe" role="img" style={{ color: 'black' }}> &#9749;</span>
         </li>
       </ul>
-      <ul className={styles.list}>
-        <li><i>Projeto criado com carinho para todos programadores e amigos!</i></li>
-      </ul>
     </div>
   );
 }

@@ -23,7 +23,7 @@ function BasicLayout({ location, children }) {
         {children}
       </Content>
       <Footer style={{ textAlign: 'center' }}>
-        Superburger 2019
+        Super Burger 2019
       </Footer>
     </Layout>
   );
