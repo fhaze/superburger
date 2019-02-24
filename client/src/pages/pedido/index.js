@@ -28,17 +28,17 @@ export default connect(mapStateToProps)(({ lanches, personalizar, finalizar, sim
   return (
     <div>
       <Row gutter={16}>
-        <Col lg={24} xl={18}>
+        <Col lg={24} xl={16} xxl={18}>
           <h1>Escolha seu lanche</h1>
           <Row gutter={16}>
             {lanches.map(lanche =>
-              <Col key={lanche.id} sm={24} xl={12} xxl={6}>
+              <Col key={lanche.id} sm={24} xl={12} xxl={8}>
                 <LancheCard lanche={lanche} onAdicionar={addLanche} onPersonalizar={setPersonalizar}/>
               </Col>
             )}
           </Row>
         </Col>
-        <Col lg={24} xl={6}>
+        <Col lg={24} xl={8} xxl={6}>
           <Carrinho/>
         </Col>
       </Row>

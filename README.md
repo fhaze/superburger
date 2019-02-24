@@ -17,7 +17,7 @@ Aplicação simples para controle de pedidos.
 ### Modo Desenvolvimento
 Execute a aplicação spring boot utilizando o maven.
 ```
-mvnw clean spring-boot:run
+mvn clean spring-boot:run
 ```
 Se tudo correr bem, ao acessar a url http://localhost:8080/pedido/cardapio
 será possível visualizar uma saida de lanches em json.

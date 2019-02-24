@@ -11,7 +11,7 @@ export default function() {
       </ul>
       <ul className={styles.list}>
         <li>Frontend responsivo, experimente acessar por um celular.
-          <span aria-label="coffe" role="img" style={{ color: 'black' }}>&#9749;</span>
+          <span aria-label="coffe" role="img" style={{ color: 'black' }}> &#9749;</span>
         </li>
       </ul>
       <ul className={styles.list}>
