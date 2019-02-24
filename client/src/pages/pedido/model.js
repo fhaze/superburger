@@ -81,9 +81,13 @@ export default {
     },
   },
   subscriptions: {
-    setup({dispatch}) {
-      dispatch({ type: 'fetchLanches' })
-      dispatch({ type: 'fetchIngredientes' })
+    setup({dispatch, history}) {
+      history.listen(({ pathname }) => {
+        if (pathname === "/pedido") {
+          dispatch({ type: 'fetchLanches' })
+          dispatch({ type: 'fetchIngredientes' })
+        }
+      })
     }
   }
 }

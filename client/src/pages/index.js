@@ -1,6 +1,7 @@
 import styles from './index.css';
 
-export default function() {
+
+export default () => {
   return (
     <div className={styles.normal}>
       <div className={styles.welcome} />
