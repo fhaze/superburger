@@ -12,7 +12,13 @@ Aplicação simples para controle de pedidos.
 - Docker
 - Docker Compose
 
-## Executando
+## Executando os testes 
+Execute os testes utilizando o maven.
+```
+mvn test
+```
+
+## Executando a aplicação
 
 ### Modo Desenvolvimento
 Execute a aplicação spring boot utilizando o maven.
