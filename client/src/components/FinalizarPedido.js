@@ -17,7 +17,6 @@ export default connect(mapStateToProps)(({finalizar, pedido, loading, dispatch})
       dispatch({ type: "pedido/realizar" }).then(() => {
         dispatch({ type: "pedido/setFinalizar", payload: false })
         dispatch({ type: "carrinho/clear" })
-        dispatch({ type: "pedidos/clear" })
 
         notification.success({
           message: "Pedido realizado com sucesso!",

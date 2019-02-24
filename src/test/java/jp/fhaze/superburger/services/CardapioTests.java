@@ -32,7 +32,7 @@ public class CardapioTests {
 
     @Before
     public void setUp() {
-        // Define valores padroes para os ingredientes para evitar problemas com a inflação.
+        // Define valores padroes a os ingredientes para evitar problemas com a inflação.
         final Ingrediente alface = ingredienteDao.getOne(Ingrediente.ID_ALFACE);
         alface.setValor(new BigDecimal("0.40"));
         ingredienteDao.save(alface);

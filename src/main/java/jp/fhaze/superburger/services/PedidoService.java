@@ -26,6 +26,12 @@ public class PedidoService {
         this.pedidoLancheDao = pedidoLancheDao;
     }
 
+    /**
+     * Realiza o pedido. (Muta o pedido)
+     *
+     * @param pedido Pedido
+     * @return Pedido com preços
+     */
     @Transactional
     public Pedido realiza(Pedido pedido) {
         pedido.setValor(calculatePrecoPedido(pedido));
@@ -34,6 +40,12 @@ public class PedidoService {
         return pedido;
     }
 
+    /**
+     * Calcula o preco de um pedido. (Muta o pedido)
+     *
+     * @param pedido Pedido
+     * @return Preco total calculado
+     */
     @Transactional
     public BigDecimal calculatePrecoPedido(Pedido pedido) {
         final BigDecimal preco = pedido.getPedidoLanches().stream()
@@ -42,6 +54,12 @@ public class PedidoService {
         return preco;
     }
 
+    /**
+     * Calcula o preco de um lanche. (Muda o pedido de lanche)
+     *
+     * @param pedidoLanche Pedido de lanche
+     * @return Preco total calculado
+     */
     @Transactional
     public BigDecimal caclulatePrecoLanche(PedidoLanche pedidoLanche) {
         final List<IngredienteAgregado> pedidoIngredientes = IngredienteAgregado.from(pedidoLanche.getIngredientes());

@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Classe auxiliar que agrega ingredientes para facilitar o calculo de promoções e descontos.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

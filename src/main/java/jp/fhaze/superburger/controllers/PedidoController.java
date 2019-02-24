@@ -35,16 +35,27 @@ public class PedidoController {
         return ResponseEntity.ok(pedidoDao.findAll());
     }
 
+    /**
+     * Lanches do cardapio
+     */
     @GetMapping("/cardapio")
     public ResponseEntity<?> cardapio() {
         return ResponseEntity.ok(lancheDao.findAll());
     }
 
+    /**
+     * Listagem de ingredientes
+     */
     @GetMapping("/ingredientes")
     public ResponseEntity<?> ingredientes() {
         return ResponseEntity.ok(ingredienteDao.findAllByOrderByNome());
     }
 
+    /**
+     * Simula o preço de lanche .
+     *
+     * @param reqPedidoLanche Pedido de Lanche
+     */
     @PostMapping("/simulacao/lanche")
     @Transactional
     public ResponseEntity<?> simulacao(@RequestBody ReqPedidoLanche reqPedidoLanche) {
@@ -54,6 +65,11 @@ public class PedidoController {
         return ResponseEntity.ok(pedido);
     }
 
+    /**
+     * Simula o pedido.
+     *
+     * @param reqPedidoLanches pedido
+     */
     @PostMapping("/simulacao")
     @Transactional
     public ResponseEntity<?> simulacao(@RequestBody List<ReqPedidoLanche> reqPedidoLanches) {
@@ -63,6 +79,11 @@ public class PedidoController {
         return ResponseEntity.ok(pedido);
     }
 
+    /**
+     * Realiza o pedido e salva.
+     *
+     * @param reqPedidoLanches pedido
+     */
     @PostMapping
     @Transactional
     public ResponseEntity<?> realizaPedido(@RequestBody List<ReqPedidoLanche> reqPedidoLanches) {
