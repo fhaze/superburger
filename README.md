@@ -1,4 +1,4 @@
-# Super Bugrer
+# Super Burger
 
 Aplicação para controle de pedidos.
 
