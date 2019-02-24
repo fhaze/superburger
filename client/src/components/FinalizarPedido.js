@@ -8,6 +8,7 @@ const mapStateToProps = ({ loading }) => ({
 
 export default connect(mapStateToProps)(({finalizar, pedido, loading, dispatch}) => (
   <Modal
+    locale={{ emptyText: "Vazio" }}
     title="Confirme seu Pedido!"
     visible={!!finalizar}
     okButtonProps={{ disabled: loading }}
