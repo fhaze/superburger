@@ -20,7 +20,7 @@ export default connect(mapStateToProps)(({finalizar, pedido, loading, dispatch})
 
         notification.success({
           message: "Pedido realizado com sucesso!",
-          description: "Seu pedido foi enviado para o Superburger. Agora é só esperar.",
+          description: "Seu pedido foi enviado para o Super Burger. Agora é só esperar.",
           duration: 8,
         })
       })

@@ -1,6 +1,6 @@
-# Superbuger
+# Super Bugrer
 
-Aplicação simples para controle de pedidos.
+Aplicação para controle de pedidos.
 
 ## Pré-Requisitos
 
@@ -35,7 +35,7 @@ cd ./client
 npm install
 npm start
 ```
-Acesse a url http://localhost:8000 e você estará no site do Superburger.
+Acesse a url http://localhost:8000 e você estará no site do Super Burger.
 
 ### Modo Produção
 Execute o comando up do docker-compose para executar a aplicação.
