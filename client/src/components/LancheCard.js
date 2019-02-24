@@ -22,7 +22,7 @@ export default ({ lanche, onAdicionar, onPersonalizar }) => {
     ]}>
       <Row>
         <Col span={6}>
-          <img style={{ maxWidth: "100%", maxHeight: "100px" }} src={dummy}/>
+          <img alt="burger" style={{ maxWidth: "100%", maxHeight: "100px" }} src={dummy}/>
         </Col>
         <Col span={18}>
           <div style={{ paddingLeft: 10 }}>

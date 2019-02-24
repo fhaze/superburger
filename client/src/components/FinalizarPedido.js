@@ -1,4 +1,4 @@
-import {notification, List, Modal, Icon, Spin} from "antd";
+import {notification, List, Modal,  Spin} from "antd";
 import formatText from "../utils/formatText";
 import {connect} from "dva";
 
@@ -9,7 +9,7 @@ const mapStateToProps = ({ loading }) => ({
 export default connect(mapStateToProps)(({finalizar, pedido, loading, dispatch}) => (
   <Modal
     title="Confirme seu Pedido!"
-    visible={finalizar}
+    visible={!!finalizar}
     okButtonProps={{ disabled: loading }}
     okText="Confirmar Pedido"
     cancelText="Voltar"

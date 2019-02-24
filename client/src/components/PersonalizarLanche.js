@@ -1,4 +1,4 @@
-import {Icon, message, Modal, Spin} from "antd";
+import {message, Modal} from "antd";
 import {connect} from "dva";
 import formatText from "../utils/formatText";
 import IngredientesEdit from "./IngredientesEdit";
@@ -12,7 +12,7 @@ const mapStateToProps = ({ pedido, loading }) => ({
 export default connect(mapStateToProps)(({lanche, ingredientes, total, loadingPreco, dispatch}) => (
  <Modal
    title="Personalize do seu jeito!"
-   visible={lanche}
+   visible={!!lanche}
    okButtonProps={{
      disabled: lanche === null
        ? true

@@ -20,7 +20,7 @@ export default connect(mapStateToProps)(({ pedidos, loading }) => {
       dataindex: "pedidoLanches",
       key: "pedidoLanches",
       title: "Lanches",
-      render: pedido => pedido.pedidoLanches.map(lanche => <Tag color="blue">{lanche.nome}</Tag>)
+      render: pedido => pedido.pedidoLanches.map(lanche => <Tag key={lanche.id} color="blue">{lanche.nome}</Tag>)
     },
     {
       dataIndex: "valor",
@@ -32,6 +32,8 @@ export default connect(mapStateToProps)(({ pedidos, loading }) => {
 
   return (
     <Table
+      rowKey="id"
+      locale={{ emptyText: "Vazio" }}
       loading={loading}
       size="middle"
       bordered

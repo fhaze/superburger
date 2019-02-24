@@ -10,6 +10,11 @@ export default function() {
         <li><strong>Frontend:</strong> React com <a href="https://umijs.org/">UmiJS</a> e <a href="https://ant.design/">Ant Design</a></li>
       </ul>
       <ul className={styles.list}>
+        <li>Frontend responsivo, experimente acessar por um celular.
+          <span aria-label="coffe" role="img" style={{ color: 'black' }}>&#9749;</span>
+        </li>
+      </ul>
+      <ul className={styles.list}>
         <li><i>Projeto criado com carinho a todos programadores e amigos!</i></li>
       </ul>
     </div>
