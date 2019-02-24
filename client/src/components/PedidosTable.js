@@ -1,6 +1,6 @@
-import {Table, Tag} from "antd";
-import {connect} from "dva";
-import formatText from "../utils/formatText";
+import {Table, Tag} from "antd"
+import {connect} from "dva"
+import formatText from "../utils/formatText"
 
 const mapStateToProps = ({ pedidos, loading }) => ({
   pedidos,
@@ -13,14 +13,22 @@ export default connect(mapStateToProps)(({ pedidos, loading }) => {
   const columns = [
     {
       dataIndex: "id",
-      title: "ID",
+      defaultSortOrder: 'descend',
+      title: "Pedido",
       sorter: (a, b) => a.id - b.id
     },
     {
       dataindex: "pedidoLanches",
       key: "pedidoLanches",
       title: "Lanches",
-      render: pedido => pedido.pedidoLanches.map(lanche => <Tag key={lanche.id} color="blue">{lanche.nome}</Tag>)
+      render: pedido => <ul>
+        {pedido.pedidoLanches.map(lanche =>
+          <li style={{ paddingBottom: 10 }}>
+            <div>{lanche.nome}</div> {lanche.ingredientesAgredados
+            .map(ingrediente => <Tag key={ingrediente.id}>{ingrediente.quantidade}x {ingrediente.nome}</Tag>)}
+          </li>
+        )}
+      </ul>
     },
     {
       dataIndex: "valor",
@@ -32,6 +40,7 @@ export default connect(mapStateToProps)(({ pedidos, loading }) => {
 
   return (
     <Table
+      pagination={{ pageSize: 4 }}
       rowKey="id"
       locale={{ emptyText: "Vazio" }}
       loading={loading}
