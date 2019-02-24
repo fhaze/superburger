@@ -36,7 +36,7 @@ export default {
     setPersonalizarIngrediente(state, {payload: {id, quantidade}}) {
       const personalizar = state.personalizar;
       const editedIngrediente = personalizar.ingredientes.find(ing => ing.id === id)
-      editedIngrediente.quantidade = quantidade === null ? 0 : quantidade;
+      editedIngrediente.quantidade = !quantidade ? 0 : quantidade; // Usuario invalidou quantidade? zera quantidade
       const newIngredientes = [
         ...state.personalizar.ingredientes
           .filter(ing => ing.id !== id), editedIngrediente].sort((x, y) => x.nome.localeCompare(y.nome))

@@ -16,7 +16,7 @@ export default ({ lanche, onAdicionar, onPersonalizar }) => {
   const { nome, valor, ingredientes } = lanche
 
   return (
-    <Card bodyStyle={{ height: 200 }} actions={[
+    <Card style={{ marginBottom:  10 }} bodyStyle={{ height: 200 }} actions={[
       <Button ghost type="primary" onClick={() => onAdicionar(lanche)}>Adicionar</Button>,
       <Button onClick={() => onPersonalizar(lanche)}>Personalizar</Button>
     ]}>

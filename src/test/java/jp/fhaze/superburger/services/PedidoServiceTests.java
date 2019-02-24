@@ -85,5 +85,14 @@ public class PedidoServiceTests {
 
         Assert.assertEquals(String.format("Preço com desconto de %.2f queijo & hamburger",PedidoService.DESCONTO_LIGHT),
                 new BigDecimal("9.00"), pedidoService.calculatePrecoPedido(pedido_3));
+
+        final Pedido pedido_4 = PedidoBuilder.builder()
+                .addLanche("X-Tiny")
+                .addIngrediente(hamburger, 1L)
+                .build()
+                .build();
+
+        Assert.assertEquals("Preço normal sem desconto",
+                new BigDecimal("3.00"), pedidoService.calculatePrecoPedido(pedido_4));
     }
 }

@@ -1,4 +1,4 @@
-import {Icon, Modal, Spin} from "antd";
+import {Icon, message, Modal, Spin} from "antd";
 import {connect} from "dva";
 import formatText from "../utils/formatText";
 import IngredientesEdit from "./IngredientesEdit";
@@ -23,6 +23,7 @@ export default connect(mapStateToProps)(({lanche, ingredientes, total, loadingPr
    cancelText="Voltar"
    onCancel={() => dispatch({ type: "pedido/removePersonalizar" })}
    onOk={() => {
+     message.success(<span><strong>{lanche.nome}</strong> adicionado no carrinho.</span>)
     dispatch({ type: "carrinho/add", payload: {lanche, total} })
     dispatch({ type: "pedido/removePersonalizar" })
    }}>

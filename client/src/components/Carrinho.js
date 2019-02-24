@@ -1,5 +1,5 @@
 import {connect} from "dva";
-import {Button, Icon, List} from "antd";
+import {Button, Icon, List, message} from "antd";
 import formatText from "../utils/formatText";
 
 const mapStateroProps  = ({ carrinho }) => ({
@@ -40,7 +40,10 @@ export default connect(mapStateroProps)(({ lanches, dispatch }) => {
         <Button
           ghost
           type="danger"
-          onClick={() => dispatch({ type: 'carrinho/remove', payload: lanche })}>
+          onClick={() => {
+            message.warn(<span><strong>{lanche.nome}</strong> removido do carrinho.</span>)
+            dispatch({ type: 'carrinho/remove', payload: lanche })
+          }}>
           Remover
         </Button>
       </List.Item>}

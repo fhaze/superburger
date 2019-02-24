@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.transaction.Transactional;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8000")
 @RestController
 @RequestMapping("/pedido")
 public class PedidoController {
