@@ -10,7 +10,7 @@ export default function() {
         <li><strong>Frontend:</strong> React com <a href="https://umijs.org/">UmiJS</a> e <a href="https://ant.design/">Ant Design</a></li>
       </ul>
       <ul className={styles.list}>
-        <li><i>Destinado com carinho a todos programadores e amigos!</i></li>
+        <li><i>Projeto criado com carinho a todos programadores e amigos!</i></li>
       </ul>
     </div>
   );
