@@ -24,7 +24,7 @@ export default {
       const newPersonalizar = {...personalizar, ingredientes}
       return {...state, personalizar: newPersonalizar}
     },
-    removePersonalizar(state, _) {
+    removePersonalizar(state) {
       return {...state, personalizar: null, preco: null}
     },
     setPreco(state, {payload: preco}) {
