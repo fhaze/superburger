@@ -4,7 +4,7 @@ Aplicação simples para controle de pedidos.
 
 ## Pré-Requisitos
 
-### Executar em modo Desenvolvimento
+### Executar os testes ou modo Desenvolvimento
 - Java 8
 - Node 8 ou superior
 
