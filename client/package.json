@@ -8,7 +8,6 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
     "antd": "^3.12.1",
     "axios": "^0.18.0",
     "dva": "^2.5.0-beta.2",
