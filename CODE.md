@@ -1,6 +1,6 @@
 # Design de código
 
-## Metodolodia
+### Metodolodia
 
 Esse projeto consiste de uma aplicação WEB utilizando a metodolodia MVC.
 O frontend é utilizado uma metodologia de componentização,
