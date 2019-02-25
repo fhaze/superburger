@@ -46,7 +46,7 @@ Pode demorar um pouco para o docker baixar as dependências.
 Assim que terminar, acesse a url  http://localhost
 
 ## Observação 
-* O quantidade máxima que um cliente pode pedir de um ingrediente é 10. 
+* A quantidade máxima que um cliente pode pedir de um ingrediente é 10. 
 
 ## Construído com
 
