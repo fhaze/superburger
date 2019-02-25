@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -57,7 +58,7 @@ public class PedidoController {
      * @param reqPedidoLanche Pedido de Lanche
      */
     @PostMapping("/simulacao/lanche")
-    public ResponseEntity<?> simulacao(@RequestBody ReqPedidoLanche reqPedidoLanche) {
+    public ResponseEntity<?> simulacao(@RequestBody @Valid ReqPedidoLanche reqPedidoLanche) {
         final Pedido pedido = createPedido(reqPedidoLanche);
 
         pedidoService.calculatePrecoPedido(pedido);
@@ -70,7 +71,7 @@ public class PedidoController {
      * @param reqPedidoLanches pedido
      */
     @PostMapping("/simulacao")
-    public ResponseEntity<?> simulacao(@RequestBody List<ReqPedidoLanche> reqPedidoLanches) {
+    public ResponseEntity<?> simulacao(@RequestBody @Valid List<ReqPedidoLanche> reqPedidoLanches) {
         final Pedido pedido = createPedido(reqPedidoLanches);
 
         pedidoService.calculatePrecoPedido(pedido);
@@ -84,7 +85,7 @@ public class PedidoController {
      */
     @PostMapping
     @Transactional
-    public ResponseEntity<?> realizaPedido(@RequestBody List<ReqPedidoLanche> reqPedidoLanches) {
+    public ResponseEntity<?> realizaPedido(@RequestBody @Valid List<ReqPedidoLanche> reqPedidoLanches) {
         pedidoService.realiza(createPedido(reqPedidoLanches));
         return ResponseEntity.ok().build();
     }
