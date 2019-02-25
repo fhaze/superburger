@@ -4,7 +4,7 @@
 
 Esse projeto consiste de uma aplicação WEB utilizando a metodolodia MVC.
 O frontend é utilizado uma metodologia de componentização,
-com o intuito reusar componentes e redizir códigos duplicados.
+com o intuito de reusar componentes e reduzir códigos duplicados.
 
 ### Como programo?
 
