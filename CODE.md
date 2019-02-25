@@ -9,7 +9,7 @@ com o intuito de reusar componentes e reduzir códigos duplicados.
 ### Como programo?
 
 Na maioria dos casos, gosto de utilizar funções puras, pois acredito ser um tipo
-de código mais facil de ser reaproveitado. Entretanto isso nem sempre é possivel no Java,
+de código mais facil de ser entendido e reaproveitado. Entretanto isso nem sempre é possivel dependendo do caso,
 mas esse é o estilo que normalmente programo.
 
 ### Como programei esse projeto
