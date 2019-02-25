@@ -27,9 +27,9 @@ mvn clean spring-boot:run
 ```
 Se tudo correr bem, ao acessar a url http://localhost:8080/pedido/cardapio
 será possível visualizar uma saida de lanches em json.
-Caso não esteja vendo essa saida, verifique se nao possui outra aplicação utilizando a porta 8080.
+Caso não esteja vendo essa saida, verifique se não possui outra aplicação utilizando a porta 8080.
 
-Agora vá ao diretório da aplicação React e instale as dependencias e execute a aplicação.
+Agora vá ao diretório da aplicação React e instale as dependências e execute a aplicação.
 ```
 cd ./client
 npm install
@@ -42,7 +42,7 @@ Execute o comando up do docker-compose para executar a aplicação.
 ```
 docker-compose up
 ```
-Pode demorar um pouco para o docker baixar as dependencias.
+Pode demorar um pouco para o docker baixar as dependências.
 Assim que terminar, acesse a url  http://localhost
 
 ## Observação 
