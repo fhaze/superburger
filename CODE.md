@@ -17,7 +17,7 @@ mas esse é o estilo que normalmente programo.
 ### O Projeto
 
 Esse projeto foi desenvolvido em aproximadamente 20 horas em um período de 2 dias. Tendo uma pequena refatoração no
-meio do desenvolvimento, para facilitar o cálculo de lanches. Sendo ele o agregador de ingredientes. Ele facilitou
+meio do desenvolvimento para facilitar o cálculo de lanches, sendo ele o agregador de ingredientes. Ele facilitou
 tanto os cálculos como a exibição de ingredientes no frontend. Apesar de apreciar funções puras, não foi possível
 aplicar esse conceito nesse projeto.
  
