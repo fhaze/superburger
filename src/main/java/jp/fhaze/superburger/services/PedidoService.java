@@ -44,7 +44,7 @@ public class PedidoService {
      * Calcula o preco de um pedido. (Muta o pedido)
      *
      * @param pedido Pedido
-     * @return Preco total calculado
+     * @return Preço total calculado
      */
     public BigDecimal calculatePrecoPedido(Pedido pedido) {
         final BigDecimal preco = pedido.getPedidoLanches().stream()
@@ -54,10 +54,10 @@ public class PedidoService {
     }
 
     /**
-     * Calcula o preco de um lanche. (Muda o pedido de lanche)
+     * Calcula o preco de um lanche. (Muta o pedido de lanche)
      *
      * @param pedidoLanche Pedido de lanche
-     * @return Preco total calculado
+     * @return Preço total calculado
      */
     public BigDecimal caclulatePrecoLanche(PedidoLanche pedidoLanche) {
         final List<IngredienteAgregado> pedidoIngredientes = IngredienteAgregado.from(pedidoLanche.getIngredientes());
