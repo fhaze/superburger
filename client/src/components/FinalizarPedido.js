@@ -1,4 +1,4 @@
-import {notification, List, Modal,  Spin} from "antd";
+import {notification, List, Modal, Spin, Tag} from "antd";
 import formatText from "../utils/formatText";
 import {connect} from "dva";
 
@@ -43,6 +43,15 @@ export default connect(mapStateToProps)(({finalizar, pedido, loading, dispatch})
             title={lanche.nome}
             description={formatText.currency(lanche.valor)}
           />
+          <div>
+            {lanche.ingredientesAgredados.map(ingrediente =>
+              <div>
+                <Tag style={{ display: 'inline' }} key={ingrediente.id}>
+                  {ingrediente.quantidade}x {ingrediente.nome}
+                </Tag>
+              </div>
+            )}
+          </div>
         </List.Item>
       }
     />
