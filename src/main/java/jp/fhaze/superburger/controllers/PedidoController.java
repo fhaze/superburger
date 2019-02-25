@@ -57,7 +57,6 @@ public class PedidoController {
      * @param reqPedidoLanche Pedido de Lanche
      */
     @PostMapping("/simulacao/lanche")
-    @Transactional
     public ResponseEntity<?> simulacao(@RequestBody ReqPedidoLanche reqPedidoLanche) {
         final Pedido pedido = createPedido(reqPedidoLanche);
 
@@ -71,7 +70,6 @@ public class PedidoController {
      * @param reqPedidoLanches pedido
      */
     @PostMapping("/simulacao")
-    @Transactional
     public ResponseEntity<?> simulacao(@RequestBody List<ReqPedidoLanche> reqPedidoLanches) {
         final Pedido pedido = createPedido(reqPedidoLanches);
 

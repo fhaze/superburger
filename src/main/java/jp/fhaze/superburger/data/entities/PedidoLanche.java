@@ -18,7 +18,8 @@ import java.util.List;
 @Entity
 public class PedidoLanche {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "pedido_lanche_seq")
+    @SequenceGenerator(name = "pedido_lanche_seq", allocationSize = 1)
     private Long id;
     private String nome;
     @ManyToMany

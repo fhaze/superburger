@@ -16,9 +16,10 @@ import java.util.List;
 @Entity
 public class Pedido {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "pedido_seq")
+    @SequenceGenerator(name = "pedido_seq", allocationSize = 1)
     private Long id;
-    @ManyToMany
+    @OneToMany
     @JoinColumn
     private List<PedidoLanche> pedidoLanches;
     private BigDecimal valor;

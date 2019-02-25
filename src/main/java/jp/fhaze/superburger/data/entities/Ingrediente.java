@@ -5,9 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Data
@@ -17,6 +15,8 @@ import java.math.BigDecimal;
 @Entity
 public class Ingrediente {
     @Id
+    @GeneratedValue(generator = "ingrediente_seq")
+    @SequenceGenerator(name = "ingrediente_seq", allocationSize = 1)
     private Long id;
     private String nome;
     @Column(precision = 10, scale = 2)

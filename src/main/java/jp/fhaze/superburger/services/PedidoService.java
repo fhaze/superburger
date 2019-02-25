@@ -46,7 +46,6 @@ public class PedidoService {
      * @param pedido Pedido
      * @return Preco total calculado
      */
-    @Transactional
     public BigDecimal calculatePrecoPedido(Pedido pedido) {
         final BigDecimal preco = pedido.getPedidoLanches().stream()
                 .map(this::caclulatePrecoLanche).reduce(BigDecimal.ZERO, BigDecimal::add);
@@ -60,7 +59,6 @@ public class PedidoService {
      * @param pedidoLanche Pedido de lanche
      * @return Preco total calculado
      */
-    @Transactional
     public BigDecimal caclulatePrecoLanche(PedidoLanche pedidoLanche) {
         final List<IngredienteAgregado> pedidoIngredientes = IngredienteAgregado.from(pedidoLanche.getIngredientes());
 

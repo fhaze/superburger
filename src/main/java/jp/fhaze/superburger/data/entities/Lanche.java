@@ -17,6 +17,8 @@ import java.util.List;
 @Entity
 public class Lanche {
     @Id
+    @GeneratedValue(generator = "lanche_seq")
+    @SequenceGenerator(name = "lanche_seq", allocationSize = 1)
     private Long id;
     private String nome;
     @ManyToMany
