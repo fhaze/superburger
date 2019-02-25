@@ -27,9 +27,9 @@ export default connect(mapStateToProps)(({ lanches, personalizar, finalizar, sim
 
   return (
     <div>
+      <h1>Escolha seu lanche</h1>
       <Row gutter={16}>
         <Col lg={24} xl={16} xxl={18}>
-          <h1>Escolha seu lanche</h1>
           <Row gutter={16}>
             {lanches.map(lanche =>
               <Col key={lanche.id} sm={24} xl={12} xxl={8}>
